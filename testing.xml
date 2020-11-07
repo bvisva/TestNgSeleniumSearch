@@ -5,19 +5,21 @@
 <parameter name="selenium.chromedriver" value="webdriver.chrome.driver" />
 <parameter name="selenium.chromedriverurl" value="C:\\Users\\DELL\\eclipse-workspace\\BrowserDrivers\\chromedriver.exe" />
 <listeners>
-<listener class-name = "testnglistners.TestListner"></listener>
-</listeners>
+<listener class-name = "testnglistners.PageTestListner"></listener>
+</listeners> 
 
-   <test name = "testdemo">
+   <!--  <test name = "testdemo">
       <classes>
          <class name = "testngmain.TestDemo" />         
       </classes>
-   </test>
-
+   </test>-->
+   
    <test name = "searchdemo">
       <classes>
+         <class name = "testngmain.BaseTestConfiguration" />
+         <!-- <class name = "testngmain.ScreenShotDemo"/>-->
          <class name = "testngmain.AmazonSearch" />
-         <class name = "testngmain.GoogleSearch" />
+         <class name = "testngmain.GoogleSearch" /> 
       </classes>
    </test>
    

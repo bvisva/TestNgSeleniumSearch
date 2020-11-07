@@ -1,6 +1,5 @@
-package testngpages;
+package testngpage;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,14 +10,14 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GoogleSearchPage {
-	
-	private WebDriver _driver;
+public class GooglePageSearch {
+	private WebDriver _driver; 
 	private By waitForSearchButton = By.xpath("//input[@name = 'btnK']");	
 	
 		
-	public GoogleSearchPage(WebDriver driver){
-		this._driver=driver;
+	public GooglePageSearch(WebDriver driver){
+		//super(driver);
+		this._driver = driver;
 	}
 	
 	@FindBy(how=How.XPATH, using="//input[@name = 'q']") WebElement searchTextBox;
