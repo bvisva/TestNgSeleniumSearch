@@ -16,7 +16,7 @@
    
    <test name = "searchdemo">
       <classes>
-         <class name = "testngmain.BaseTestConfiguration" />
+         <!--<class name = "testngmain.BaseTestConfiguration" />-->
          <!-- <class name = "testngmain.ScreenShotDemo"/>-->
          <class name = "testngmain.AmazonSearch" />
          <class name = "testngmain.GoogleSearch" /> 

@@ -25,7 +25,7 @@ public class EnvironmentSetup {
 	private static String remoteUrlString = "http://localhost:4444/wd/hub"; 
 	
 	private static WebDriver returnWebDriver;
-	private static RemoteWebDriver remoteWebDriver; 
+	 
 	
 	public static WebDriver getDriverSetup(String browser) {
 		
@@ -72,14 +72,16 @@ public class EnvironmentSetup {
 	}
    
    
-    public static RemoteWebDriver getRemoteDriverSetup() throws MalformedURLException {
+    public static WebDriver getRemoteDriverSetup() throws MalformedURLException {
     	
     	DesiredCapabilities capabilities = new DesiredCapabilities();
-    	capabilities.setCapability("browserName", remoteBrowserName);
+    	//capabilities.setBrowserName("chrome");
+    	//capabilities.setPlatform(Platform.LINUX);
+    	 capabilities.setCapability("browserName", remoteBrowserName);
         capabilities.setCapability("version", remoteBrowserVersion);
         capabilities.setCapability("platform", remoteBrowserVersion);
-    	remoteWebDriver = new RemoteWebDriver(new URL(remoteUrlString),capabilities);
-    	return remoteWebDriver;   	
+        returnWebDriver = new RemoteWebDriver(new URL(remoteUrlString),capabilities);
+    	return returnWebDriver;   	
     	
 		
     }
